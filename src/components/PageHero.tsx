@@ -16,7 +16,7 @@ export function PageHero({
   return (
     <section className="rd-section" style={{ borderTop: "none", paddingTop: "clamp(2.5rem, 6vw, 4.5rem)" }}>
       <div
-        className="rd-container rd-grid-bg rd-page-hero-inner"
+        className="rd-container rd-grid-bg rd-page-hero-inner rd-page-hero-light"
         style={{ borderRadius: "var(--radius-xl)", padding: "clamp(1.5rem, 4vw, 2.5rem)" }}
       >
         {eyebrow ? <p className="rd-eyebrow">{eyebrow}</p> : null}

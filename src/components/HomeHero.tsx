@@ -33,7 +33,7 @@ export function HomeHero() {
   return (
     <section className="rd-home-hero rd-section" style={{ borderTop: "none", paddingTop: "clamp(2rem, 5vw, 4rem)" }}>
       <div className="rd-container">
-        <div className="rd-home-hero-panel rd-grid-bg">
+        <div className="rd-home-hero-panel rd-grid-bg rd-page-hero-light">
           <SignalSweep />
           <div className="rd-home-hero-grid">
             <div className="rd-home-hero-copy">

@@ -20,8 +20,21 @@ export const FEATURE_DEEP_OVERRIDES: Partial<Record<string, Override>> = {
   "campaign-cockpit": {
     heroStatement:
       "The cockpit is where a statewide race stops pretending five inboxes are a strategy. It is the morning command surface: ranked readiness, ranked risk, and the next operator move.",
+    whatItDoes: [
+      "Left rail: route posture across Daily, Map, Readiness, Queues, and Lanes—so operators open the right surface without losing command context.",
+      "Center readiness wall: cross-lane tiles (email, calendar, counties, field, fundraising, compliance) with green / yellow / red posture tied to real objects.",
+      "Right column: ranked next actions with lane labels and severity—dependencies visible, owners assignable.",
+      "Principal queue: only what needs authority (message risk, surrogate lines, major sends)—separate from operator trivia.",
+      "Top bar: day context plus overnight deltas ingested from lanes (sends, holds, pledges, filings windows, field exceptions).",
+      "Bottom lane strip: twelve-lane scan at a glance—same posture object the morning brief and ranked queue reference.",
+    ],
     whyCampaignsNeedIt:
       "Leadership does not fail because it lacks heart. It fails because nobody can answer—on demand—what is blocked, what is approved, and what must happen before sundown.",
+    campaignValue: [
+      "One command floor reduces duplicate reality: finance, field, and comms argue about decisions—not about which spreadsheet is true.",
+      "Calendar pressure, launch gates, and county posture stay visible in the same stack as fundraising aging and compliance windows.",
+      "GOTV and rapid response weeks stay legible: exceptions surface before they become headlines.",
+    ],
     operatorWorkflow: [
       "Pull overnight deltas into a single command stack: sends, calendar, counties, fundraising, compliance windows, field exceptions.",
       "Rank exceptions by deadline proximity, financial exposure, and message risk—then assign owners.",

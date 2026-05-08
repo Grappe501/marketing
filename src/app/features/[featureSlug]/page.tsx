@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { CampaignCockpitFeaturePage } from "@/components/CampaignCockpitFeaturePage";
 import { FeaturePage } from "@/components/FeaturePage";
 import { getAllFeatureSlugs, getFeature } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -22,5 +23,8 @@ export default async function Page({ params }: Props) {
   const { featureSlug } = await params;
   const feature = getFeature(featureSlug);
   if (!feature) notFound();
+  if (feature.slug === "campaign-cockpit") {
+    return <CampaignCockpitFeaturePage feature={feature} />;
+  }
   return <FeaturePage feature={feature} />;
 }
