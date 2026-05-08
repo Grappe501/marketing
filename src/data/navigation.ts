@@ -6,7 +6,7 @@ export const NAV: NavGroup[] = [
     id: "story",
     label: "Story",
     links: [
-      { label: "Why RedDirt OS", href: routes.why, description: "The fracture problem campaigns solve." },
+      { label: "Why RedDirt OS", href: routes.why, description: "Story: fracture, county + briefing mocks, data + facts screens." },
       { label: "How it works", href: routes.howItWorks, description: "Governed workflows and shared data." },
       { label: "Platform", href: routes.platform, description: "One operating rhythm end to end." },
     ],
