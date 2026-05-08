@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { LaneConnectionMap } from "@/components/LaneConnectionMap";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
+import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
 import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
 import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { getCtas } from "@/lib/marketingData";
@@ -49,6 +50,13 @@ export default function Page() {
             <EmailLaunchMock />
           </OriginalVisualFrame>
         </div>
+        <OriginalVisualFrame
+          title="Example: calendar request rail"
+          caption="Calendar HQ uses the same spine — request → review → draft → public-ready before comms stubs unlock (schematic only)."
+          style={{ marginTop: "1.25rem" }}
+        >
+          <CalendarRequestMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section title="Layers, not logos" intro="Enterprise buyers ask for architecture. Campaign operators ask for relief. This diagram is both: connective tissue, not a slide decoration.">

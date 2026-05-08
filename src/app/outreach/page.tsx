@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
+import { SuppressionDiffMock } from "@/components/visuals/SuppressionDiffMock";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -32,9 +35,30 @@ export default function Page() {
         </OriginalVisualFrame>
       </Section>
       <Section title="Launch rail (illustrative)" intro="Original CSS/SVG-style rail—not a screenshot.">
-        <OriginalVisualFrame title="Email launch mock" caption="Audience → message → preflight → test → final approval → send.">
-          <EmailLaunchMock />
+        <div className="rd-stack-2col">
+          <OriginalVisualFrame title="Email launch mock" caption="Audience → message → preflight → test → final approval → send.">
+            <EmailLaunchMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Suppression snapshot (mock)" caption="Pre-flight vs locked posture — sample numbers, not a list export.">
+            <SuppressionDiffMock />
+          </OriginalVisualFrame>
+        </div>
+      </Section>
+      <Section
+        title="Send timing is a calendar discipline"
+        intro="Rapid response, volunteer activation, and surrogate pushes inherit timing from the same week the calendar lane owns — so outreach does not fire into a tour hold, a county fair, or a conflicting principal moment by accident."
+      >
+        <NarrativeBlock kicker="Cross-lane" title="Distribution is not an island">
+          When calendar truth is weak, comms invents urgency that field cannot staff and finance cannot absorb. Calendar HQ is designed to keep the week legible before the send rail opens.
+        </NarrativeBlock>
+        <OriginalVisualFrame title="Week at a glance (shared metaphor) (mock)" caption="Schematic density — not list export or sync claims." style={{ marginTop: "1.25rem" }}>
+          <WeekGridMock />
         </OriginalVisualFrame>
+        <p style={{ marginTop: "1rem" }}>
+          <Link className="rd-link-arrow" href={routes.calendar} style={{ color: "var(--accent-2)" }}>
+            Calendar + events lane
+          </Link>
+        </p>
       </Section>
       <CTASection
         title="Open outreach lane"

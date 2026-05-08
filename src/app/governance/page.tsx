@@ -5,6 +5,8 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { GovernanceShield } from "@/components/visuals/GovernanceShield";
+import { ApprovalChainMock } from "@/components/visuals/ApprovalChainMock";
+import { AuditTrailMock } from "@/components/visuals/AuditTrailMock";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -37,6 +39,14 @@ export default function Page() {
             <GovernanceShield />
           </div>
         </OriginalVisualFrame>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Approval chain (mock)" caption="Roles and steps vary by deployment — four-stage illustration only.">
+            <ApprovalChainMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Audit-style event log (mock)" caption="Immutable-style lines for narrative clarity — not a legal record claim.">
+            <AuditTrailMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
       <CTASection
         title="Open governance lane"

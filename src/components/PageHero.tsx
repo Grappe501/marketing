@@ -15,7 +15,10 @@ export function PageHero({
 }) {
   return (
     <section className="rd-section" style={{ borderTop: "none", paddingTop: "clamp(2.5rem, 6vw, 4.5rem)" }}>
-      <div className="rd-container rd-grid-bg" style={{ borderRadius: "var(--radius-xl)", padding: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+      <div
+        className="rd-container rd-grid-bg rd-page-hero-inner"
+        style={{ borderRadius: "var(--radius-xl)", padding: "clamp(1.5rem, 4vw, 2.5rem)" }}
+      >
         {eyebrow ? <p className="rd-eyebrow">{eyebrow}</p> : null}
         <h1 className="rd-h1">{title}</h1>
         {subtitle ? <p className="rd-lead">{subtitle}</p> : null}

@@ -8,7 +8,13 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CampaignStackComparison } from "@/components/visuals/CampaignStackComparison";
 import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
+import { ApprovalChainMock } from "@/components/visuals/ApprovalChainMock";
+import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
+import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
+import { CommsDownstreamMock } from "@/components/visuals/CommsDownstreamMock";
+import { EventWorkstreamMock } from "@/components/visuals/EventWorkstreamMock";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { getCtas, getLanes } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -63,6 +69,39 @@ export default function Page() {
         <OriginalVisualFrame title="Consequence-ordered operator queue (mock)" caption="Illustration of ranked next actions tied to lanes — not deployment telemetry." style={{ marginTop: "1.25rem" }}>
           <RankedActionsMock />
         </OriginalVisualFrame>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Morning brief strip (mock)" caption="How posture surfaces as time-stamped signals — schematic only.">
+            <MorningBriefMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Multi-role approval chain (mock)" caption="High-risk paths can require more than one signature — illustration, not policy.">
+            <ApprovalChainMock />
+          </OriginalVisualFrame>
+        </div>
+      </Section>
+
+      <Section
+        title="Calendar + events: where collisions become visible early"
+        intro="The platform story for calendar is not prettier grids — it is governed intake, approval chains, tour holds, week density, and downstream comms/field artifacts tied to the same approved object. That is how calendar stops being a silent source of last-minute chaos."
+      >
+        <NarrativeBlock kicker="Workflow spine" title="Calendar is a cross-lane hub">
+          When calendar truth is weak, outreach timing, field staffing, press, and finance hooks all improvise in parallel. RedDirt OS is designed so calendar objects carry dependencies and unlock downstream work deliberately.
+        </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Request rail (mock)" caption="Queue → review → draft → public-ready — schematic only.">
+            <CalendarRequestMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Event dependency surface (mock)" caption="Illustrative gates on one event object.">
+            <EventWorkstreamMock />
+          </OriginalVisualFrame>
+        </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Week at a glance (mock)" caption="Density + overlap hint — not a sync product.">
+            <WeekGridMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Comms handoff (mock)" caption="Downstream artifacts after public-ready — illustrative gates.">
+            <CommsDownstreamMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
 
       <Section title="Coverage at a glance" intro="Try to find the missing lane. This matrix is intentionally dense so the coverage story survives a skeptical skim.">

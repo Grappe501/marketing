@@ -1,7 +1,10 @@
 const STEPS = [
   { t: "Monday morning", d: "Campaign Cockpit ranks readiness: sends, calendar, counties, fundraising, compliance windows, field exceptions—one command stack." },
   { t: "Email: volunteer activation", d: "Audience studio + message studio produce an explainable segment; governance attaches approvals; send execution requires final operator confirmation." },
-  { t: "Calendar: new event request", d: "Request becomes an object: owners, dependencies, surrogate posture—routed through approval workflow before public visibility transitions." },
+  {
+    t: "Calendar: new event request",
+    d: "Request becomes an object with owners and gates; dependencies (logistics, surrogates, press, field) stay attached; tour holds and week density expose collisions early; approved truth unlocks comms stubs—public visibility is a governed transition, not a leak.",
+  },
   { t: "Fundraising: pledge follow-up", d: "Pledge aging surfaces in the lane; finance review queue gets the same object the organizers see—no parallel spreadsheet truth." },
   { t: "County: briefing reviewed", d: "County intelligence updates drive comms and field adjustments; stale briefing becomes a visible exception, not a silent mistake." },
   { t: "Field: GOTV risk", d: "Readiness gates show coverage gaps early enough to re-sequence capacity; exceptions route to Cockpit with owners." },

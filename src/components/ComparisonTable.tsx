@@ -10,14 +10,8 @@ export function ComparisonTable({
   after: string[];
 }) {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-        gap: "1rem",
-      }}
-    >
-      <div className="rd-panel" style={{ padding: "1.1rem", borderTop: "3px solid rgba(226,85,85,0.55)" }}>
+    <div className="rd-compare-grid">
+      <div className="rd-panel rd-compare-panel rd-compare-panel--before" style={{ padding: "1.1rem" }}>
         <p className="rd-eyebrow" style={{ letterSpacing: "0.16em", color: "var(--danger)" }}>
           Before
         </p>
@@ -32,7 +26,7 @@ export function ComparisonTable({
           ))}
         </ul>
       </div>
-      <div className="rd-panel rd-panel-glow" style={{ padding: "1.1rem", borderTop: "3px solid rgba(91,211,154,0.65)" }}>
+      <div className="rd-panel rd-panel-glow rd-compare-panel rd-compare-panel--after" style={{ padding: "1.1rem" }}>
         <p className="rd-eyebrow" style={{ letterSpacing: "0.16em", color: "var(--success)" }}>
           With RedDirt OS
         </p>

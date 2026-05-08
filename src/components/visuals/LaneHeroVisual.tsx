@@ -1,4 +1,6 @@
 import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
+import { EventWorkstreamMock } from "@/components/visuals/EventWorkstreamMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { ComplianceLedgerMock } from "@/components/visuals/ComplianceLedgerMock";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
@@ -19,7 +21,15 @@ export function LaneHeroVisual({ laneSlug }: { laneSlug: string }) {
     case "outreach-distribution":
       return <EmailLaunchMock />;
     case "calendar-events":
-      return <CalendarRequestMock />;
+      return (
+        <div className="rd-cal-lane-hero-bundle">
+          <CalendarRequestMock />
+          <div className="rd-cal-lane-hero-split">
+            <EventWorkstreamMock />
+            <WeekGridMock />
+          </div>
+        </div>
+      );
     case "volunteer-field-gotv":
       return <CountyMapIllustration />;
     case "county-intelligence":

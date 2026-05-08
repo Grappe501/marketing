@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { AnimatedCommandLine } from "@/components/AnimatedCommandLine";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
+import { LaneOverviewStripMock } from "@/components/visuals/LaneOverviewStripMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { ProductScreenshotFrame } from "@/components/ProductScreenshotFrame";
 import { SignalSweep } from "@/components/SignalSweep";
 import { getSite } from "@/lib/marketingData";
@@ -77,6 +79,23 @@ export function HomeHero() {
               <p className="rd-muted" style={{ margin: "0.65rem 0 0", fontSize: "0.78rem", maxWidth: "42ch" }}>
                 Operating picture: readiness cards, county pressure, email launch, calendar queue, fundraising follow-up, compliance deadlines, operator next action—conceptual layout only.
               </p>
+              <div
+                style={{
+                  marginTop: "0.85rem",
+                  display: "grid",
+                  gap: "0.65rem",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                }}
+              >
+                <div className="rd-home-hero-aux-mock">
+                  <p className="rd-home-hero-aux-label">Lane posture strip (mock)</p>
+                  <LaneOverviewStripMock />
+                </div>
+                <div className="rd-home-hero-aux-mock">
+                  <p className="rd-home-hero-aux-label">Ranked queue (mock)</p>
+                  <RankedActionsMock />
+                </div>
+              </div>
             </div>
           </div>
         </div>

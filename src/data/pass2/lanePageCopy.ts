@@ -91,20 +91,25 @@ export const LANE_PAGE_COPY: Record<string, LanePass2Copy> = {
   },
   "calendar-events": {
     whyBreaks:
-      "Calendars become pretty grids while the real work lives in email: event requests disappear, approvals are informal, and comms queues are invented at the last minute.",
+      "Calendars become pretty grids while the real work lives in email: event requests disappear, tour holds are ignored, collisions surface after invites go out, approvals are informal, and comms queues are invented at the last minute.",
     whatOperatorGets:
-      "Calendar HQ: intake objects, approval workflows, public/private visibility discipline, tour planning posture, and event comms queues generated from approved truth.",
+      "Calendar HQ: governed intake objects, week density as an operator surface, tour hold collision visibility, approval workflows, public/private visibility discipline, and downstream comms/field artifacts tied to approved calendar truth.",
     coreWorkflows: [
       { id: "intake", title: "Request → object", body: "Requests become tracked items with owners, dependencies, and risk flags—not vague forwards." },
       { id: "approve", title: "Approvals with teeth", body: "Configured chains for high-visibility moments; fast templates for low-risk repeats." },
       { id: "comms", title: "Comms queue generation", body: "Approved events spawn the downstream work the campaign always forgets until Friday afternoon." },
+      {
+        id: "density",
+        title: "Week density + tour holds",
+        body: "Principal travel, surrogate tours, county pushes, and volunteer surges share one canvas so overlaps become visible early—not as inbox panic the week of.",
+      },
     ],
     connectsToRace:
-      "Events tie to field staffing, surrogate tours, fundraising moments, and press posture—Calendar HQ is designed to be the switchboard, not a silo.",
+      "Events tie to field staffing, surrogate tours, fundraising moments, press posture, and outreach timing—Calendar HQ is designed to be the switchboard, not a silo.",
     operatorExample:
-      "New rally request: logistics checklist assigned, surrogate packet routed to intelligence review, press posture queued, volunteer staffing tied to the same calendar object before publish transitions.",
-    visualTitle: "Calendar HQ — request to visibility",
-    visualCaption: "Original mock: request card → review → approved event → comms queue.",
+      "New rally request: logistics checklist assigned, surrogate packet routed to intelligence review, press posture queued, volunteer staffing tied to the same calendar object; Wednesday collision against a tour hold surfaces in the week grid before publish transitions; comms stub v2 regenerates after resolution.",
+    visualTitle: "Calendar HQ — rail, dependencies, and week surface",
+    visualCaption: "Request rail plus event dependency mock and week density — illustrations only, not live calendar data.",
   },
   "volunteer-field-gotv": {
     whyBreaks:

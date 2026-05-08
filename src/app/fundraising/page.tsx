@@ -4,6 +4,7 @@ import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
+import { BudgetBarsMock } from "@/components/visuals/BudgetBarsMock";
 import { FundraisingLaneMock } from "@/components/visuals/FundraisingLaneMock";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
@@ -37,6 +38,9 @@ export default function Page() {
       <Section title="Lane flow (illustrative)" intro="Original illustration: donor motion as a connected rail—not stock photography.">
         <OriginalVisualFrame title="Fundraising lane mock" caption="Illustrative flow only; your deployment determines live integrations.">
           <FundraisingLaneMock />
+        </OriginalVisualFrame>
+        <OriginalVisualFrame title="Budget mix at a glance (mock)" caption="Schematic bars for leadership posture — not certified reporting." style={{ marginTop: "1.25rem" }}>
+          <BudgetBarsMock />
         </OriginalVisualFrame>
       </Section>
       <CTASection title="Open the fundraising lane" body="Donor pipeline, call time, events, pledges, finance workflow, contribution tracking." primary={{ label: "Open lane", href: routes.lane("fundraising-good-change") }} secondary={ctas.demo} />

@@ -8,7 +8,14 @@ import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { ComplianceLedgerMock } from "@/components/visuals/ComplianceLedgerMock";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
 import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
+import { BudgetBarsMock } from "@/components/visuals/BudgetBarsMock";
 import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
+import { CommsDownstreamMock } from "@/components/visuals/CommsDownstreamMock";
+import { EventWorkstreamMock } from "@/components/visuals/EventWorkstreamMock";
+import { TourHoldConflictMock } from "@/components/visuals/TourHoldConflictMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
+import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
+import { SuppressionDiffMock } from "@/components/visuals/SuppressionDiffMock";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { ProductScreenshotFrame } from "@/components/ProductScreenshotFrame";
 import { getCtas } from "@/lib/marketingData";
@@ -17,7 +24,7 @@ import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = pageMeta(
   "Walk the race",
-  "Guided walkthrough: Cockpit rhythm, governed outreach launch, calendar request triage, fundraising follow-up, county pressure read, compliance posture, operator next actions—static marketing build, no backend.",
+  "Guided walkthrough: Cockpit rhythm, governed outreach launch, calendar HQ (request rail, dependencies, week density, tour collisions, comms handoff), fundraising follow-up, county pressure, compliance posture—static marketing build, no backend.",
   { path: "/demo", ogVariant: "default" },
 );
 
@@ -43,17 +50,47 @@ export default function Page() {
         <ProductScreenshotFrame title="Cockpit — readiness mock">
           <CockpitMockup />
         </ProductScreenshotFrame>
-      </Section>
-
-      <Section title="2. Launch an outreach run" intro="Audience, message, packet, preflight, test, final operator posture—governed sequence, not a panic button.">
-        <OriginalVisualFrame title="Email launch rail" caption="Illustration only; real sends remain provider- and policy-bound.">
-          <EmailLaunchMock />
+        <OriginalVisualFrame title="Brief after readiness (mock)" caption="Same Monday rhythm as time-stamped signals — static illustration." style={{ marginTop: "1.25rem" }}>
+          <MorningBriefMock />
         </OriginalVisualFrame>
       </Section>
 
-      <Section title="3. Review event requests" intro="Calendar truth stays in one lane: requests, review, draft, public-ready, comms plan stub.">
-        <OriginalVisualFrame title="Calendar queue" caption="Schematic flow—not a live calendar integration claim.">
-          <CalendarRequestMock />
+      <Section title="2. Launch an outreach run" intro="Audience, message, packet, preflight, test, final operator posture—governed sequence, not a panic button.">
+        <div className="rd-stack-2col">
+          <OriginalVisualFrame title="Email launch rail" caption="Illustration only; real sends remain provider- and policy-bound.">
+            <EmailLaunchMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Suppression diff (mock)" caption="Illustrative list posture before final sign-off — not live data.">
+            <SuppressionDiffMock />
+          </OriginalVisualFrame>
+        </div>
+      </Section>
+
+      <Section
+        title="3. Calendar HQ — event requests and everything they drag in"
+        intro="Calendar is a workflow bomb: one approved moment should unlock logistics, surrogates, press, field staffing, and comms stubs — without losing the thread between internal coordination and public-ready truth."
+      >
+        <NarrativeBlock kicker="Calendar lane" title="Truth first, then downstream artifacts">
+          Requests become objects with owners and gates. Public visibility is a transition, not a leak. Tour holds and local pushes share the same density surface so collisions show up early.
+        </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Request → visibility rail (mock)" caption="Schematic flow — not a live calendar integration claim.">
+            <CalendarRequestMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Event dependencies (mock)" caption="One rally with cross-functional gates — illustration only.">
+            <EventWorkstreamMock />
+          </OriginalVisualFrame>
+        </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Week density + collision hint (mock)" caption="Tour holds vs local energy — sample week, not sync data.">
+            <WeekGridMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Tour vs local overlap (mock)" caption="Narrative example resolution — not automated scheduling.">
+            <TourHoldConflictMock />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame title="Comms downstream from approved truth (mock)" caption="Artifacts inherit calendar state — explicit gates where policy requires." style={{ marginTop: "1.25rem" }}>
+          <CommsDownstreamMock />
         </OriginalVisualFrame>
       </Section>
 
@@ -61,6 +98,9 @@ export default function Page() {
         <div className="rd-panel" style={{ padding: "1rem", color: "var(--muted)" }}>
           Pledged-but-open items, call-time outcomes, and documentation posture route into the same operating picture the manager already trusts for weekly command.
         </div>
+        <OriginalVisualFrame title="Budget mix (mock)" caption="Illustrative spend posture alongside pipeline work — not certified totals." style={{ marginTop: "1.25rem" }}>
+          <BudgetBarsMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section title="5. Read county pressure" intro="County intelligence as attention surface—schematic, not survey-grade geography.">

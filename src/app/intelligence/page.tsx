@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
+import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
 import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -38,6 +39,9 @@ export default function Page() {
       <Section title="Operational rail (illustrative)" intro="Original workflow rail.">
         <OriginalVisualFrame title="Intelligence handoff rail" caption="Illustrative: intake → review → approve → publish/execute → record.">
           <WorkflowRail />
+        </OriginalVisualFrame>
+        <OriginalVisualFrame title="Brief as operating surface (mock)" caption="Intel and gates show up alongside exceptions in the same rhythm — illustration only." style={{ marginTop: "1.25rem" }}>
+          <MorningBriefMock />
         </OriginalVisualFrame>
       </Section>
       <Section title="Drilldowns" intro="Split across two lanes in the taxonomy: data/contact graph and intelligence briefings—both feed decisions.">

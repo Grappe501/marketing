@@ -26,7 +26,11 @@ export const NAV: NavGroup[] = [
     label: "Execution",
     links: [
       { label: "Outreach", href: routes.outreach, description: "Audience, message, approval, send posture." },
-      { label: "Calendar + events", href: routes.calendar, description: "Requests, approvals, comms queues." },
+      {
+        label: "Calendar + events",
+        href: routes.calendar,
+        description: "HQ intake, week density, tour holds, approvals, public-ready gates, downstream comms + field artifacts.",
+      },
       { label: "Field + GOTV", href: routes.field, description: "Volunteers, relational, precinct priorities." },
       { label: "Counties", href: routes.counties, description: "Local intelligence and county operations." },
     ],

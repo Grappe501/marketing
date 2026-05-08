@@ -6,6 +6,8 @@ import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { TourHoldConflictMock } from "@/components/visuals/TourHoldConflictMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -38,6 +40,14 @@ export default function Page() {
         <OriginalVisualFrame title="Ranked next actions (detail mock)" caption="Same idea as the cockpit cards, expressed as a tight queue — illustration only." style={{ marginTop: "1.25rem" }}>
           <RankedActionsMock />
         </OriginalVisualFrame>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Calendar week density (mock)" caption="How tour holds and locals read on the same surface — schematic only.">
+            <WeekGridMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Tour vs local collision (mock)" caption="Example overlap story — not scheduling automation.">
+            <TourHoldConflictMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
       <CTASection title="Drill the Cockpit lane" body="Morning brief, next actions, readiness dashboards, launch gates, statewide map posture." primary={{ label: "Open lane", href: routes.lane("cockpit-command") }} secondary={ctas.features} />
     </>

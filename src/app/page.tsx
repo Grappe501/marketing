@@ -18,6 +18,14 @@ import { Section } from "@/components/Section";
 import { CampaignStackComparison } from "@/components/visuals/CampaignStackComparison";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
+import { ApprovalChainMock } from "@/components/visuals/ApprovalChainMock";
+import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
+import { CommsDownstreamMock } from "@/components/visuals/CommsDownstreamMock";
+import { EventWorkstreamMock } from "@/components/visuals/EventWorkstreamMock";
+import { TourHoldConflictMock } from "@/components/visuals/TourHoldConflictMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
+import { LaneOverviewStripMock } from "@/components/visuals/LaneOverviewStripMock";
+import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
 import type { Feature } from "@/lib/types";
 import { getCtas, getFeature, getLanes, getProofPoints } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -132,6 +140,52 @@ export default function HomePage() {
 
       <MotionReveal>
       <Section
+        eyebrow="Calendar + events"
+        title="Calendar HQ is a switchboard — not a silent grid."
+        intro="Event requests, tour holds, public-ready transitions, and downstream comms stubs belong in the same governed lane. When calendar truth is weak, field staffing, press, surrogates, and fundraising hooks all improvise in parallel — and the public schedule stops matching reality."
+      >
+        <NarrativeBlock kicker="Why it is a system strength" title="From request object to comms queue — without losing the thread">
+          Calendar HQ is designed to carry dependencies and approvals on the event object itself: what still needs review, what blocks publish, and what downstream artifacts should unlock only after the right signatures.
+        </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame
+            title="Request → visibility rail (mock)"
+            caption="Schematic flow — not a live calendar integration claim."
+          >
+            <CalendarRequestMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame
+            title="Event dependencies (mock)"
+            caption="One rally with logistics, surrogates, press, and field gates — illustration only."
+          >
+            <EventWorkstreamMock />
+          </OriginalVisualFrame>
+        </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Week density + collision hint (mock)" caption="Tour holds and local pushes on the same canvas — sample composition.">
+            <WeekGridMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Tour vs local overlap (mock)" caption="Narrative example resolution — not automated scheduling.">
+            <TourHoldConflictMock />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame
+          title="Comms downstream from approved truth (mock)"
+          caption="Artifacts inherit calendar state — gates remain explicit where policy requires."
+          style={{ marginTop: "1.25rem" }}
+        >
+          <CommsDownstreamMock />
+        </OriginalVisualFrame>
+        <p style={{ marginTop: "1rem" }}>
+          <Link className="rd-link-arrow" href={routes.calendar} style={{ color: "var(--accent-2)" }}>
+            Read the full Calendar + events story
+          </Link>
+        </p>
+      </Section>
+      </MotionReveal>
+
+      <MotionReveal>
+      <Section
         eyebrow="Command"
         title="The Cockpit is the emotional center"
         intro="Monday morning is not a mood. It is a command rhythm: readiness, blockers, ranked next actions, calendar pressure, county health, fundraising follow-ups, compliance windows, and field/GOTV exceptions—one stack."
@@ -141,6 +195,27 @@ export default function HomePage() {
             <CockpitMockup />
           </OriginalVisualFrame>
           <CommandGrid cards={commandCards} />
+        </div>
+        <OriginalVisualFrame
+          title="Morning command brief (mock)"
+          caption="Illustrative line items only — not live telemetry or a customer deployment."
+          style={{ marginTop: "1.25rem" }}
+        >
+          <MorningBriefMock />
+        </OriginalVisualFrame>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame
+            title="Twelve-lane posture strip (mock)"
+            caption="Schematic dots for ready / watch / risk — not deployment health telemetry."
+          >
+            <LaneOverviewStripMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame
+            title="Multi-role approval chain (mock)"
+            caption="High-risk paths can require more than one signature — illustration only."
+          >
+            <ApprovalChainMock />
+          </OriginalVisualFrame>
         </div>
       </Section>
       </MotionReveal>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
@@ -6,6 +7,7 @@ import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -35,6 +37,22 @@ export default function Page() {
         <OriginalVisualFrame title="Attention surface" caption="Use drilldown county pages for real local truth; this is a visual metaphor.">
           <CountyMapIllustration />
         </OriginalVisualFrame>
+      </Section>
+      <Section
+        title="Field reads the same week the calendar lane owns"
+        intro="Canvasses, blitzes, and surrogate hits only work when they are sequenced against tour holds, public events, and finance moments — not when field improvises against a schedule nobody trusts."
+      >
+        <NarrativeBlock kicker="Shared surface" title="Capacity is a calendar story too">
+          When the week is visible as pressure — not as scattered invites — field directors can negotiate gaps before GOTV, not during it.
+        </NarrativeBlock>
+        <OriginalVisualFrame title="Week density (shared metaphor) (mock)" caption="Same schematic as Calendar HQ — field and calendar should argue with data, not with inbox threads." style={{ marginTop: "1.25rem" }}>
+          <WeekGridMock />
+        </OriginalVisualFrame>
+        <p style={{ marginTop: "1rem" }}>
+          <Link className="rd-link-arrow" href={routes.calendar} style={{ color: "var(--accent-2)" }}>
+            Calendar + events lane
+          </Link>
+        </p>
       </Section>
       <CTASection
         title="Open field lane"

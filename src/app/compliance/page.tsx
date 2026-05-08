@@ -6,7 +6,10 @@ import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
 import { ComplianceLedgerMock } from "@/components/visuals/ComplianceLedgerMock";
+import { AuditTrailMock } from "@/components/visuals/AuditTrailMock";
+import { BudgetBarsMock } from "@/components/visuals/BudgetBarsMock";
 import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { SuppressionDiffMock } from "@/components/visuals/SuppressionDiffMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -48,6 +51,17 @@ export default function Page() {
             <RankedActionsMock />
           </OriginalVisualFrame>
         </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Budget posture bars (mock)" caption="Illustrative allocation mix — not ledger math or a calculator.">
+            <BudgetBarsMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Send-adjacent suppression snapshot (mock)" caption="Conceptual pre/post diff — numbers are sample composition only.">
+            <SuppressionDiffMock />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame title="Review + handoff trail (mock)" caption="Operator-facing event lines for posture — not a filing or certification artifact." style={{ marginTop: "1.25rem" }}>
+          <AuditTrailMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
@@ -6,6 +7,7 @@ import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
 import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
+import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -37,6 +39,22 @@ export default function Page() {
             <FeatureConstellation />
           </OriginalVisualFrame>
         </div>
+      </Section>
+      <Section
+        title="County moments belong on the same calendar spine as HQ"
+        intro="Local briefings, surrogate hits, and partner events only land cleanly when the calendar lane owns density and visibility — so county pushes do not surprise field, finance, or comms."
+      >
+        <NarrativeBlock kicker="Coordination" title="One week surface for many local truths">
+          County work is not separate from the statewide clock: it competes for the same volunteer energy, press cycles, and principal travel as HQ events.
+        </NarrativeBlock>
+        <OriginalVisualFrame title="Week density (shared metaphor) (mock)" caption="Same schematic as Calendar HQ — counties and HQ should read the same pressure map." style={{ marginTop: "1.25rem" }}>
+          <WeekGridMock />
+        </OriginalVisualFrame>
+        <p style={{ marginTop: "1rem" }}>
+          <Link className="rd-link-arrow" href={routes.calendar} style={{ color: "var(--accent-2)" }}>
+            Calendar + events
+          </Link>
+        </p>
       </Section>
       <CTASection
         title="Open county intelligence lane"
