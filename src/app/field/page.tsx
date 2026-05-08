@@ -25,7 +25,10 @@ export default function Page() {
         title="Field wins when people, priorities, and follow-up connect."
         subtitle="RedDirt OS is designed to structure volunteer intake, relational organizing, staffing, precinct priorities, GOTV readiness, and supporter follow-up—so field pressure shows up in the same operating picture as calendar density and county targets."
       />
-      <Section title="GOTV is readiness, not a weekend mood" intro="Readiness gates are designed to surface coverage gaps early—when you can still fix them—instead of discovering holes during the final sprint.">
+      <Section
+        title="GOTV is readiness, not a weekend mood"
+        intro="Readiness gates are designed to surface coverage gaps early—when you can still fix them—instead of discovering holes during the final sprint. Field breaks when volunteer energy does not convert to shifts, shifts do not convert to coverage, and GOTV becomes a sprint because readiness was never tracked as state. The OS story is inventory: precinct priorities, captain follow-ups, and rescue tasks that show up in the same ranked posture as calendar collisions and comms gates."
+      >
         <NarrativeBlock kicker="Capacity" title="Volunteers are inventory">
           Shifts and staffing are operational objects: gaps should become visible exceptions with owners, not last-minute group texts.
         </NarrativeBlock>

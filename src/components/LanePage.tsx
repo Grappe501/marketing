@@ -1,6 +1,7 @@
 import type { ComponentProps } from "react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { CTASection } from "@/components/CTASection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
@@ -8,6 +9,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { VisualPlaceholder } from "@/components/VisualPlaceholder";
 import { LaneHeroVisual } from "@/components/visuals/LaneHeroVisual";
+import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { LANE_PAGE_COPY } from "@/data/pass2/lanePageCopy";
 import { getCtas, getFeaturesForLane } from "@/lib/marketingData";
 import type { Lane } from "@/lib/types";
@@ -95,8 +97,14 @@ export function LanePage({ lane }: { lane: Lane }) {
         </p>
       </Section>
 
-      <Section title="Lane architecture (reference)" intro="Structured sections for continuity with Pass 1 data—Pass 3 can fold these into richer visuals.">
-        <div style={{ display: "grid", gap: "0.75rem" }}>
+      <Section
+        title="Lane architecture (reference)"
+        intro="Structured sections for continuity with Pass 1 data—Pass 3 can fold these into richer visuals. Treat this block as the engineering-facing skeleton behind the operator story above: it names the lane’s internal sections so drilldowns stay consistent as the site grows, without pretending every subsection is fully visualized on day one."
+      >
+        <NarrativeBlock kicker="Spine" title="High-risk lanes still share the same governance rail">
+          Even when the lane is specialized—calendar, outreach, finance posture—the moral pattern repeats: intake → review → approve → execute → record. That repetition is intentional: campaigns learn faster when the spine is stable even as the surface changes.
+        </NarrativeBlock>
+        <div style={{ display: "grid", gap: "0.75rem", marginTop: "1rem" }}>
           {lane.sections.map((s) => (
             <div key={s.id} className="rd-panel" style={{ padding: "1rem" }}>
               <p style={{ margin: 0, fontWeight: 650 }}>{s.title}</p>
@@ -106,6 +114,13 @@ export function LanePage({ lane }: { lane: Lane }) {
             </div>
           ))}
         </div>
+        <figure className="rd-panel" style={{ margin: "1.25rem 0 0", padding: "1rem" }}>
+          <p style={{ margin: "0 0 0.65rem", fontWeight: 650, fontSize: "0.85rem" }}>Governance rail (illustrative)</p>
+          <WorkflowRail />
+          <p className="rd-muted" style={{ margin: "0.65rem 0 0", fontSize: "0.78rem" }}>
+            Schematic only—your deployment defines steps, roles, and automation boundaries.
+          </p>
+        </figure>
       </Section>
 
       <Section title="How this lane connects to the rest of the race" intro={copy?.connectsToRace ?? "Lanes are designed to reinforce each other: governance, calendar truth, county intelligence, and cockpit exceptions should not live in separate brains."} />

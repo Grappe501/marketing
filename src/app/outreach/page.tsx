@@ -26,7 +26,10 @@ export default function Page() {
         title="Distribution is governance, not just sending."
         subtitle="RedDirt OS treats outreach as a governed workflow from audience definition through message approval, suppression posture, readiness checks, and final operator confirmation—so speed does not require abandoning control."
       />
-      <Section title="The real risk is the last mile" intro="Most damage happens when fatigue meets a send button: wrong segment, wrong approval state, wrong suppression snapshot. The OS story is deliberate confirmation patterns—not paranoia, but adult supervision.">
+      <Section
+        title="The real risk is the last mile"
+        intro="Most damage happens when fatigue meets a send button: wrong segment, wrong approval state, wrong suppression snapshot. The OS story is deliberate confirmation patterns—not paranoia, but adult supervision. Distribution is also a calendar discipline: rapid response and activation sends inherit timing from the same week the calendar lane owns, so outreach does not fire into tour holds, county fairs, or conflicting principal moments by accident."
+      >
         <NarrativeBlock kicker="Execution" title="Preflight is a campaign habit">
           Provider sync readiness can be integration-ready where configured—but the moral requirement is operator-guided validation: mapping, permissions, suppression deltas, and proof that the launch object matches reality.
         </NarrativeBlock>

@@ -25,9 +25,15 @@ export default function Page() {
         title="A statewide race is 75 local races running at once."
         subtitle="RedDirt OS is built to give every county a place in the operating picture: leaders, issues, pathways, briefings, events, and field needs—operator-guided, drilldown-first, and designed to connect HQ planning to local execution."
       />
-      <Section title="HQ goes blind in inches, not miles" intro="County intelligence fails when it lives in decks nobody updates. The lane is designed for freshness signals, owners, and briefing artifacts that become comms and field actions—not archives.">
+      <Section
+        title="HQ goes blind in inches, not miles"
+        intro="County intelligence fails when it lives in decks nobody updates. The lane is designed for freshness signals, owners, and briefing artifacts that become comms and field actions—not archives. A statewide race is won locally: leaders, issues, pathways, surrogates, and volunteer reality have to stay attached to the same operating picture as calendar density and outreach timing—or HQ becomes a rumor mill."
+      >
         <NarrativeBlock kicker="Illustrative" title="Map posture, not fantasy precision">
-          The map is a coordination metaphor for attention and drift. Your implementation determines how complete county datasets are at a given moment—language stays careful.
+          The map is a coordination metaphor for attention and drift. Your implementation determines how complete county datasets are at a given moment—language stays careful. The product story is still operational: stale briefing becomes a visible exception, not a silent mistake.
+        </NarrativeBlock>
+        <NarrativeBlock kicker="Handoff" title="County intel should route to execution lanes">
+          Briefings should connect to county pages, surrogate packets, field priorities, and comms pushes—otherwise intelligence becomes expensive wallpaper.
         </NarrativeBlock>
       </Section>
       <Section title="County attention surface" intro="Original tile illustration plus an abstract mesh for how county work ties back to other lanes.">

@@ -6,14 +6,20 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { ComplianceLedgerMock } from "@/components/visuals/ComplianceLedgerMock";
-import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
+import { ArkansasCountyHeatMock } from "@/components/visuals/ArkansasCountyHeatMock";
+import { PrecinctHeatMock } from "@/components/visuals/PrecinctHeatMock";
+import { StaticBuildGraphicMock } from "@/components/visuals/StaticBuildGraphicMock";
 import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
 import { BudgetBarsMock } from "@/components/visuals/BudgetBarsMock";
 import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
 import { CommsDownstreamMock } from "@/components/visuals/CommsDownstreamMock";
 import { EventWorkstreamMock } from "@/components/visuals/EventWorkstreamMock";
+import { FundraisingLaneMock } from "@/components/visuals/FundraisingLaneMock";
+import { LaneOverviewStripMock } from "@/components/visuals/LaneOverviewStripMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { TourHoldConflictMock } from "@/components/visuals/TourHoldConflictMock";
 import { WeekGridMock } from "@/components/visuals/WeekGridMock";
+import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
 import { SuppressionDiffMock } from "@/components/visuals/SuppressionDiffMock";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
@@ -94,35 +100,119 @@ export default function Page() {
         </OriginalVisualFrame>
       </Section>
 
-      <Section title="4. Move fundraising follow-up" intro="Money motion stays connected to finance review queues—not a detached spreadsheet myth.">
+      <Section
+        title="4. Move fundraising follow-up"
+        intro="Money motion stays connected to finance review queues—not a detached spreadsheet myth. Fundraising is where campaigns most often invent parallel truth: organizers track pledges one way, finance tracks documentation another way, and leadership hears a third number in the Friday update. The lane story is one object model: pipeline stages, call time outcomes, pledge aging, and treasurer-visible posture."
+      >
         <div className="rd-panel" style={{ padding: "1rem", color: "var(--muted)" }}>
           Pledged-but-open items, call-time outcomes, and documentation posture route into the same operating picture the manager already trusts for weekly command.
+        </div>
+        <div style={{ marginTop: "1.25rem" }}>
+          <ProductScreenshotFrame title="Walkthrough — ledger + pipeline (mock)">
+            <div
+              style={{
+                display: "grid",
+                gap: "0.75rem",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                alignItems: "start",
+              }}
+            >
+              <ComplianceLedgerMock />
+              <FundraisingLaneMock />
+            </div>
+          </ProductScreenshotFrame>
         </div>
         <OriginalVisualFrame title="Budget mix (mock)" caption="Illustrative spend posture alongside pipeline work — not certified totals." style={{ marginTop: "1.25rem" }}>
           <BudgetBarsMock />
         </OriginalVisualFrame>
-      </Section>
-
-      <Section title="5. Read county pressure" intro="County intelligence as attention surface—schematic, not survey-grade geography.">
-        <OriginalVisualFrame title="County attention heat" caption="Illustrative tiles only.">
-          <CountyMapIllustration />
+        <OriginalVisualFrame title="Ranked pressure includes finance windows (mock)" caption="Same cross-lane queue metaphor — illustration only." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
         </OriginalVisualFrame>
       </Section>
 
-      <Section title="6. Check compliance posture" intro="Preparation, deadlines, review status, export-ready posture—treasurer and counsel remain accountable for official filing.">
-        <OriginalVisualFrame title="Ledger-style preparation view" caption="Support workflow illustration—not deterministic compliance.">
-          <ComplianceLedgerMock />
+      <Section
+        title="5. Read county pressure"
+        intro="County intelligence as attention surface—schematic, not survey-grade geography. A statewide race is many local races: the map is a coordination metaphor for drift and priority, not a certified cartography product. The point is operational: stale briefings and thin field coverage should become visible exceptions with owners—before they become election-week surprises."
+      >
+        <NarrativeBlock kicker="Local reality" title="HQ goes blind in inches">
+          County work is not decoration—it is where message, surrogates, and field programs meet local truth. The heat tiles below are illustrative posture, not voter data.
+        </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1rem" }}>
+          <OriginalVisualFrame
+            title="Arkansas — schematic county heat (mock)"
+            caption="Stylized state outline with invented county regions — not official geography or voter data."
+          >
+            <ArkansasCountyHeatMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame
+            title="Sample county — precinct attention (mock)"
+            caption="Fictional county footprint with invented precinct cells — not real boundaries or results."
+          >
+            <PrecinctHeatMock />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame title="Twelve-lane scan includes counties (mock)" caption="County lane sits next to field, calendar, and comms in the same posture strip — schematic only." style={{ marginTop: "1.25rem" }}>
+          <LaneOverviewStripMock />
         </OriginalVisualFrame>
       </Section>
 
-      <Section title="7. End with operator next actions" intro="The week closes with ranked work: what moves doors, money, deadlines, and message risk—without pretending dangerous actions should be easy to do by accident.">
+      <Section
+        title="6. Check compliance posture"
+        intro="Preparation, deadlines, review status, export-ready posture—treasurer and counsel remain accountable for official filing. Compliance preparation is a weekly rhythm in the OS story: contribution and expenditure discipline, vendor documentation posture, and filing proximity signals that make ‘review week’ less like archaeology."
+      >
+        <NarrativeBlock kicker="Handoff" title="Export and review—not magic filing">
+          The ledger view is support workflow illustration. The rail reminds you the same governance spine exists here too: prepare, review, package, human responsibility.
+        </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1rem" }}>
+          <OriginalVisualFrame title="Ledger-style preparation view" caption="Support workflow illustration—not deterministic compliance.">
+            <ComplianceLedgerMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Handoff spine (illustrative)" caption="Prepare → review → export/package → human filing responsibility — schematic only.">
+            <WorkflowRail />
+          </OriginalVisualFrame>
+        </div>
+      </Section>
+
+      <Section
+        title="7. End with operator next actions"
+        intro="The week closes with ranked work: what moves doors, money, deadlines, and message risk—without pretending dangerous actions should be easy to do by accident. If the walkthrough stopped at pretty pages, it would fail; the ending has to return to the same cockpit discipline the campaign actually runs on Monday."
+      >
         <NarrativeBlock kicker="Close" title="Command, not chaos">
           If the walkthrough felt specific, the product story is working. If it felt generic, we failed—regardless of how polished the CSS is.
         </NarrativeBlock>
+        <div style={{ marginTop: "1.25rem" }}>
+          <ProductScreenshotFrame title="Walkthrough — close where the week actually lives (mock)">
+            <div
+              style={{
+                display: "grid",
+                gap: "0.75rem",
+                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                alignItems: "start",
+              }}
+            >
+              <CockpitMockup />
+              <RankedActionsMock />
+            </div>
+          </ProductScreenshotFrame>
+        </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Morning brief strip (mock)" caption="Same rhythm as step 1 — static illustration.">
+            <MorningBriefMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Twelve-lane posture (mock)" caption="Where counties sit next to field, calendar, and comms — schematic only.">
+            <LaneOverviewStripMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
 
-      <Section title="What stays static (on purpose)" intro="No analytics, no embeds, no automatic intake. Conversion architecture is real; plumbing is a deployment decision.">
-        <div className="rd-panel" style={{ padding: "1rem", color: "var(--muted)" }}>
+      <Section
+        title="What stays static (on purpose)"
+        intro="No analytics, no embeds, no automatic intake. Conversion architecture is real; plumbing is a deployment decision. Static is not embarrassment—it is honesty: the marketing site should not fake backend behaviors, collect data silently, or pretend intake exists before security and privacy posture are real."
+      >
+        <OriginalVisualFrame title="What “static” means on this build (mock)" caption="Narrative diagram only — not a live security audit or deployment manifest.">
+          <StaticBuildGraphicMock />
+        </OriginalVisualFrame>
+        <div className="rd-panel" style={{ padding: "1rem", color: "var(--muted)", marginTop: "1.25rem" }}>
           When intake is wired, this page should deepen into scheduling and agenda capture. Until then, use{" "}
           <Link href={routes.contact} style={{ color: "var(--accent-2)" }}>
             Contact

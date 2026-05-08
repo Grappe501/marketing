@@ -26,6 +26,8 @@ import { TourHoldConflictMock } from "@/components/visuals/TourHoldConflictMock"
 import { WeekGridMock } from "@/components/visuals/WeekGridMock";
 import { LaneOverviewStripMock } from "@/components/visuals/LaneOverviewStripMock";
 import { MorningBriefMock } from "@/components/visuals/MorningBriefMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
+import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import type { Feature } from "@/lib/types";
 import { getCtas, getFeature, getLanes, getProofPoints } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -303,7 +305,7 @@ export default function HomePage() {
       <Section
         eyebrow="Walkthrough"
         title="Walk the race from the Cockpit"
-        intro="This is a narrative demo—static marketing build (no backend). It is written so a serious campaign staffer recognizes their week."
+        intro="This is a narrative demo—static marketing build (no backend). It is written so a serious campaign staffer recognizes their week: Monday posture, outreach launch discipline, calendar HQ depth, fundraising follow-up tied to finance, county attention, compliance preparation posture, and a close that returns to ranked next actions—not a generic product tour."
       >
         <DemoWalkthrough />
         <p style={{ marginTop: "1rem" }}>
@@ -315,7 +317,11 @@ export default function HomePage() {
       </MotionReveal>
 
       <MotionReveal>
-      <Section eyebrow="Proof posture" title="What serious looks like" intro="Structural commitments the product story must keep earning—no lazy AI hype, no compliance fantasy.">
+      <Section
+        eyebrow="Proof posture"
+        title="What serious looks like"
+        intro="Structural commitments the product story must keep earning—no lazy AI hype, no compliance fantasy. Proof here is not logos—it is language discipline: what we claim, what we refuse to fake, how lanes connect, and how governance stays visible when stakes rise."
+      >
         <ProofStrip points={proof} />
       </Section>
       </MotionReveal>
@@ -324,9 +330,12 @@ export default function HomePage() {
       <Section
         eyebrow="Challenge"
         title="Try to find the missing lane."
-        intro="The question is not which tool replaces which spreadsheet. The question is what happens when the whole campaign finally runs from the same operating picture."
+        intro="The question is not which tool replaces which spreadsheet. The question is what happens when the whole campaign finally runs from the same operating picture: the same calendar truth field uses, the same pledge aging finance uses, the same suppression posture comms uses, and the same county briefing freshness leadership uses. If you cannot find a missing lane below, the coverage claim is doing its job."
       >
-        <div className="rd-panel rd-panel-glow" style={{ padding: "1.25rem" }}>
+        <NarrativeBlock kicker="Coverage" title="Twelve lanes is a completeness test, not a decoration">
+          Each chip maps to a governed lane in the taxonomy—not a vague theme. Drill the feature map if you want receipts: eighty-two capabilities written in operator language, with explicit boundaries around compliance and government systems.
+        </NarrativeBlock>
+        <div className="rd-panel rd-panel-glow" style={{ padding: "1.25rem", marginTop: "1rem" }}>
           <div className="rd-chip-row">
             {chips.map((c) => (
               <span key={c} className="rd-chip">
@@ -335,6 +344,17 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Lane posture strip (mock)" caption="Twelve lanes as a schematic scan line — not live monitoring.">
+            <LaneOverviewStripMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Governance spine (illustrative)" caption="The same intake → review → approve → execute → record rail repeats wherever risk concentrates.">
+            <WorkflowRail />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame title="Monday still ranks consequences (mock)" caption="Coverage only matters if the week still returns to ranked work — illustration only." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       </MotionReveal>
 
@@ -342,7 +362,7 @@ export default function HomePage() {
       <Section
         eyebrow="Implementation"
         title="Adoption is operational sequencing"
-        intro="Software fails mid-race when onboarding is a single meeting. RedDirt OS is designed around migration maps, runbooks, training posture, readiness checklists, and a cockpit cadence that becomes the campaign’s weekly rhythm."
+        intro="Software fails mid-race when onboarding is a single meeting. RedDirt OS is designed around migration maps, runbooks, training posture, readiness checklists, and a cockpit cadence that becomes the campaign’s weekly rhythm. Adoption is not ‘go live day’—it is whether Monday changes: fewer mystery blockers, fewer duplicate lists, fewer Friday afternoon comms scrambles, and fewer compliance archaeology projects."
       >
         <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--muted)" }}>
           <li style={{ marginBottom: "0.55rem" }}>Map the campaign: lanes, owners, dependencies, and where the stack lies today.</li>
