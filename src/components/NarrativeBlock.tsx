@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export function NarrativeBlock({ kicker, title, children }: { kicker?: string; title: string; children: ReactNode }) {
   return (
-    <div className="rd-panel" style={{ padding: "1.1rem" }}>
+    <div className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "1.1rem" }}>
       {kicker ? (
         <p className="rd-eyebrow" style={{ letterSpacing: "0.16em" }}>
           {kicker}

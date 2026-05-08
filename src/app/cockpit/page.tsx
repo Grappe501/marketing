@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CockpitMockup } from "@/components/visuals/CockpitMockup";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -34,6 +35,9 @@ export default function Page() {
           <MetricStyleCard label="Blockers" value="Owned queue" hint="Every blocker has an owner or it is invalid." />
           <MetricStyleCard label="Principal calls" value="Ranked" hint="Only what requires authority—not trivia." />
         </div>
+        <OriginalVisualFrame title="Ranked next actions (detail mock)" caption="Same idea as the cockpit cards, expressed as a tight queue — illustration only." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <CTASection title="Drill the Cockpit lane" body="Morning brief, next actions, readiness dashboards, launch gates, statewide map posture." primary={{ label: "Open lane", href: routes.lane("cockpit-command") }} secondary={ctas.features} />
     </>

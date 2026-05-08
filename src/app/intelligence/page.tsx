@@ -5,6 +5,7 @@ import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
+import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
 import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -30,6 +31,9 @@ export default function Page() {
         <NarrativeBlock kicker="Handoff" title="Research → approvals → outbound artifacts">
           The operating story is a rail: intake and sourcing discipline, review, approvals where configured, then execution artifacts tied to the same objects the Cockpit can read.
         </NarrativeBlock>
+        <OriginalVisualFrame title="Intel feeding the lane mesh (abstract)" caption="Briefings and research attach to execution lanes — schematic nodes only." style={{ marginTop: "1.25rem" }}>
+          <FeatureConstellation />
+        </OriginalVisualFrame>
       </Section>
       <Section title="Operational rail (illustrative)" intro="Original workflow rail.">
         <OriginalVisualFrame title="Intelligence handoff rail" caption="Illustrative: intake → review → approve → publish/execute → record.">

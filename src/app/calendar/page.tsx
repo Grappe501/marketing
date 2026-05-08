@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -29,6 +30,9 @@ export default function Page() {
         <NarrativeBlock kicker="Truth" title="Public vs private is a governance transition">
           Public-private calendar views are about controlled visibility: what voters see vs what operators coordinate—designed to reduce accidental leaks and inconsistent public schedules.
         </NarrativeBlock>
+        <OriginalVisualFrame title="Ops queue behind the calendar (mock)" caption="Calendar pressure shows up as ranked work — illustration only." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <Section title="Request → comms queue (illustrative)" intro="Original SVG mock.">
         <OriginalVisualFrame title="Calendar request mock" caption="Request → review → comms queue (illustrative).">

@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { GovernanceShield } from "@/components/visuals/GovernanceShield";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -26,6 +27,9 @@ export default function Page() {
         <NarrativeBlock kicker="Design principle" title="Deliberate friction in the right places">
           No-accidental-send design is not hostility to operators—it is respect for October. The goal is fast trusted paths for low-risk repeats and strict traceability for high-risk actions.
         </NarrativeBlock>
+        <OriginalVisualFrame title="What still needs a human signature (queue mock)" caption="Approvals surface as ranked, owned objects — illustration only." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <Section title="Shield + trail (illustration)" intro="Original SVG mark—not a certification badge.">
         <OriginalVisualFrame title="Governance mark" caption="Illustrative shield + check path.">

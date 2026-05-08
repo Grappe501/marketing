@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
+import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -27,10 +28,15 @@ export default function Page() {
           The map is a coordination metaphor for attention and drift. Your implementation determines how complete county datasets are at a given moment—language stays careful.
         </NarrativeBlock>
       </Section>
-      <Section title="County attention surface" intro="Original tile illustration.">
-        <OriginalVisualFrame title="County map illustration" caption="Illustrative heat tiles—not a certified map product.">
-          <CountyMapIllustration />
-        </OriginalVisualFrame>
+      <Section title="County attention surface" intro="Original tile illustration plus an abstract mesh for how county work ties back to other lanes.">
+        <div className="rd-stack-2col">
+          <OriginalVisualFrame title="County map illustration" caption="Illustrative heat tiles—not a certified map product.">
+            <CountyMapIllustration />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="County intel in the capability mesh" caption="Abstract constellation — coordination metaphor, not a data graph.">
+            <FeatureConstellation />
+          </OriginalVisualFrame>
+        </div>
       </Section>
       <CTASection
         title="Open county intelligence lane"

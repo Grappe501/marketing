@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { CampaignStackComparison } from "@/components/visuals/CampaignStackComparison";
+import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 
@@ -27,6 +30,14 @@ export default function Page() {
           The copy is intentionally operational: readiness gates, approval chains, morning brief rhythm, county pressure, GOTV readiness, donor follow-up decay, calendar collisions, and compliance windows.
           This is not generic SaaS positioning—it is a statewide race described the way staffers actually talk in October.
         </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="From scattered stack to command layer" caption="Illustrative contrast — not a customer benchmark.">
+            <CampaignStackComparison />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Lanes as a connected mesh" caption="Abstract nodes — taxonomy metaphor, not a wiring diagram.">
+            <FeatureConstellation />
+          </OriginalVisualFrame>
+        </div>
       </Section>
       <Section title="What we refuse to fake" intro="Trust is cumulative; sloppy claims destroy it in one sentence.">
         <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--muted)" }}>

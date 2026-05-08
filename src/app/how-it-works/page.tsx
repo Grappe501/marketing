@@ -4,6 +4,8 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { LaneConnectionMap } from "@/components/LaneConnectionMap";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
+import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
 import { WorkflowRail } from "@/components/visuals/WorkflowRail";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
@@ -39,7 +41,14 @@ export default function Page() {
       </Section>
 
       <Section title="Every high-risk path gets a rail" intro="This is the moral core: intake → review → approve → execute → record. Not paperwork for its own sake—traceability under pressure.">
-        <WorkflowRail />
+        <div className="rd-stack-2col">
+          <OriginalVisualFrame title="Generic governance rail" caption="Intake → review → approve → execute → record — the spine across lanes.">
+            <WorkflowRail />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Example: governed send rail" caption="Outreach is one high-risk path — illustration only.">
+            <EmailLaunchMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
 
       <Section title="Layers, not logos" intro="Enterprise buyers ask for architecture. Campaign operators ask for relief. This diagram is both: connective tissue, not a slide decoration.">

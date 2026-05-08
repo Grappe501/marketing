@@ -4,7 +4,9 @@ import { NarrativeBlock } from "@/components/NarrativeBlock";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
+import { CalendarRequestMock } from "@/components/visuals/CalendarRequestMock";
 import { ComplianceLedgerMock } from "@/components/visuals/ComplianceLedgerMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -38,6 +40,14 @@ export default function Page() {
         <OriginalVisualFrame title="Ledger mock (original illustration)" caption="Illustrative ledger rows—not a filing system screenshot.">
           <ComplianceLedgerMock />
         </OriginalVisualFrame>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Deadlines collide with public moments" caption="Calendar + compliance posture intersect — schematic flow only.">
+            <CalendarRequestMock />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Cross-lane ranked pressure (mock)" caption="Finance and compliance windows compete with comms and field — ranked illustration.">
+            <RankedActionsMock />
+          </OriginalVisualFrame>
+        </div>
       </Section>
 
       <Section

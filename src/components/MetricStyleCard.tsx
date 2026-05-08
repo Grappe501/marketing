@@ -1,6 +1,6 @@
 export function MetricStyleCard({ label, value, hint }: { label: string; value: string; hint?: string }) {
   return (
-    <div className="rd-panel" style={{ padding: "1rem" }}>
+    <div className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "1rem" }}>
       <p className="rd-muted" style={{ margin: 0, fontSize: "0.78rem", letterSpacing: "0.14em", textTransform: "uppercase" }}>
         {label}
       </p>

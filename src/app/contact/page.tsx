@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -66,6 +68,12 @@ export default function Page() {
             Prepare a walkthrough agenda: paste the list above into email or notes—submission on this site stays disabled in the static marketing build.
           </p>
         </div>
+      </Section>
+
+      <Section title="What a walkthrough prioritizes (illustration)" intro="When intake is wired, this becomes live triage — for now it is a visual metaphor for how we stack your week against lanes.">
+        <OriginalVisualFrame title="Example triage queue (mock)" caption="Not your data — a sample ranked list to show how conversations map to operating objects.">
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section title="While intake is offline" intro="This site is static marketing. Contact submission is not wired until an approved intake backend is connected.">

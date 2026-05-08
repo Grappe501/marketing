@@ -16,7 +16,7 @@ export function CTASection({
   return (
     <section className="rd-section">
       <div className="rd-container">
-        <div className="rd-panel rd-panel-glow" style={{ padding: "clamp(1.5rem, 4vw, 2.25rem)" }}>
+        <div className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "clamp(1.5rem, 4vw, 2.25rem)" }}>
           <h2 className="rd-h2">{title}</h2>
           {body ? <p className="rd-lead">{body}</p> : null}
           <div className="rd-cta-row">

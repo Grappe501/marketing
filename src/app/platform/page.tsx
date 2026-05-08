@@ -3,8 +3,12 @@ import Link from "next/link";
 import { CoverageMatrix } from "@/components/CoverageMatrix";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { CampaignStackComparison } from "@/components/visuals/CampaignStackComparison";
+import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas, getLanes } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -48,9 +52,20 @@ export default function Page() {
             The screens operators live in: queues, editors, checklists, maps—always tied back to the cockpit posture.
           </NarrativeBlock>
         </div>
+        <div className="rd-stack-2col" style={{ marginTop: "1.5rem" }}>
+          <OriginalVisualFrame title="Stack → cockpit consolidation" caption="Original SVG — metaphor for replacing scattered tools with one governed layer.">
+            <CampaignStackComparison />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Capability mesh across lanes" caption="Abstract constellation — not a live dependency graph.">
+            <FeatureConstellation />
+          </OriginalVisualFrame>
+        </div>
+        <OriginalVisualFrame title="Consequence-ordered operator queue (mock)" caption="Illustration of ranked next actions tied to lanes — not deployment telemetry." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
 
-      <Section title="Coverage at a glance" intro="Try to find the missing lane. This matrix is intentionally dense—Pass 3 will add motion; Pass 2 adds the persuasive weight.">
+      <Section title="Coverage at a glance" intro="Try to find the missing lane. This matrix is intentionally dense so the coverage story survives a skeptical skim.">
         <CoverageMatrix lanes={lanes} />
       </Section>
 

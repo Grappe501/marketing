@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { SystemDiagram } from "@/components/SystemDiagram";
+import { CampaignStackComparison } from "@/components/visuals/CampaignStackComparison";
+import { CockpitMockup } from "@/components/visuals/CockpitMockup";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 
@@ -31,12 +35,27 @@ export default function Page() {
         <NarrativeBlock kicker="Operator overload" title="Everyone is busy. Nobody is accountable.">
           Urgent work becomes invisible when it is not represented as objects: owners, dependencies, readiness, approvals, and timestamps. RedDirt OS is designed to capture that work as governed lanes so the next action is obvious—and high-consequence actions are hard to do accidentally.
         </NarrativeBlock>
+        <div className="rd-stack-2col" style={{ marginTop: "1.25rem" }}>
+          <OriginalVisualFrame title="Fragments vs governed cockpit layer" caption="Original SVG — scattered tools consolidating into one command surface (illustration).">
+            <CampaignStackComparison />
+          </OriginalVisualFrame>
+          <OriginalVisualFrame title="Readiness + exception density (mock)" caption="CSS composition — not a live dashboard or customer deployment.">
+            <CockpitMockup />
+          </OriginalVisualFrame>
+        </div>
       </Section>
 
       <Section title="Leadership blind spots are a design failure" intro="Principals should not have to micromanage trivia to feel safe. They should be able to see readiness and exceptions without drowning in operational noise.">
         <NarrativeBlock kicker="Command" title="The cockpit is not vanity metrics">
           Executive visibility should be about readiness gates, deadline proximity, message risk, county pressure, and field/GOTV exceptions—ranked, owned, and tied to real decisions.
         </NarrativeBlock>
+        <OriginalVisualFrame
+          title="Ranked next actions (illustration)"
+          caption="Operator queue ordered by consequence — conceptual layout only."
+          style={{ marginTop: "1.25rem" }}
+        >
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section title="Why a serious statewide race needs an operating system" intro="A statewide campaign is many urgent workflows at once. Without a governed operating picture, you get message drift, calendar collisions, donor follow-up decay, field gaps, and compliance reconstruction at the worst possible week.">

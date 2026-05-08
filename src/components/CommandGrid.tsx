@@ -10,7 +10,7 @@ export function CommandGrid({ cards }: { cards: Card[] }) {
       }}
     >
       {cards.map((c) => (
-        <div key={c.title} className="rd-panel" style={{ padding: "1rem" }}>
+        <div key={c.title} className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "1rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
             <p style={{ margin: 0, fontWeight: 650 }}>{c.title}</p>
             <span className="rd-pill" style={{ alignSelf: "flex-start" }}>

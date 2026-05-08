@@ -9,7 +9,7 @@ export function LaneCard({ lane }: { lane: Lane }) {
   const stakes = extra?.whyBreaks ?? lane.whyItMatters;
 
   return (
-    <Link href={routes.lane(lane.slug)} className="rd-panel" style={{ padding: "1.1rem", display: "block" }}>
+    <Link href={routes.lane(lane.slug)} className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "1.1rem", display: "block" }}>
       <p className="rd-eyebrow" style={{ letterSpacing: "0.14em", fontSize: "0.68rem" }}>
         {lane.eyebrow}
       </p>

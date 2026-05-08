@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { FundraisingLaneMock } from "@/components/visuals/FundraisingLaneMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -29,6 +30,9 @@ export default function Page() {
         <NarrativeBlock kicker="Good Change" title="A lane, not a slogan">
           Good Change is positioned as structured fundraising motion inside the OS: stages, owners, checkpoints, and treasurer-visible posture—without claiming every processor integration unless configured.
         </NarrativeBlock>
+        <OriginalVisualFrame title="Finance + field pressure in one queue (mock)" caption="Fundraising does not float alone — ranked illustration." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <Section title="Lane flow (illustrative)" intro="Original illustration: donor motion as a connected rail—not stock photography.">
         <OriginalVisualFrame title="Fundraising lane mock" caption="Illustrative flow only; your deployment determines live integrations.">

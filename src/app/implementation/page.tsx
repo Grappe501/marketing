@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { DrilldownList } from "@/components/DrilldownList";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
+import { AdoptionPhasesMock } from "@/components/visuals/AdoptionPhasesMock";
+import { CockpitMockup } from "@/components/visuals/CockpitMockup";
 import { getCtas } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -35,11 +38,17 @@ export default function Page() {
         subtitle="This is not a slide deck migration. It is sequencing: map reality, load lanes, align data, set governance, train operators, launch a cockpit cadence, then expand without shattering the operating picture. Timelines vary by team size, data cleanliness, and risk tolerance—what matters is the order, not a fake universal deadline."
       />
 
-      <Section title="Phased adoption (operator sequence)" intro="Pass 3 can add diagrams and screenshots. Pass 2 establishes the sequence serious campaigns recognize from painful experience.">
+      <Section title="Phased adoption (operator sequence)" intro="The sequence serious campaigns recognize from painful experience — illustrated here as rails and cockpit posture, not a fixed calendar promise.">
         <WorkflowSteps steps={PHASES} />
+        <OriginalVisualFrame title="Adoption spine (illustration)" caption="Map → load → align → govern → train → rhythm → expand — conceptual only." style={{ marginTop: "1.25rem" }}>
+          <AdoptionPhasesMock />
+        </OriginalVisualFrame>
       </Section>
 
       <Section title="Where teams usually get stuck" intro="Naming the failure modes early prevents the adoption project from becoming a morale problem.">
+        <OriginalVisualFrame title="Cockpit rhythm target (mock)" caption="What “Monday repeatable” is aiming at — CSS mock, not a screenshot." style={{ marginBottom: "1.25rem" }}>
+          <CockpitMockup />
+        </OriginalVisualFrame>
         <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--muted)" }}>
           <li style={{ marginBottom: "0.55rem" }}>Trying to import everything at once without readiness checks and suppression posture.</li>
           <li style={{ marginBottom: "0.55rem" }}>Turning governance into punishment instead of fast trusted paths for low-risk repeats.</li>

@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { CountyMapIllustration } from "@/components/visuals/CountyMapIllustration";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -26,6 +27,9 @@ export default function Page() {
         <NarrativeBlock kicker="Capacity" title="Volunteers are inventory">
           Shifts and staffing are operational objects: gaps should become visible exceptions with owners, not last-minute group texts.
         </NarrativeBlock>
+        <OriginalVisualFrame title="Field exceptions as ranked work (mock)" caption="Same cockpit discipline — doors, counties, and deadlines in one queue." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <Section title="County pressure (illustrative map)" intro="Illustrative tile heat—not a geographic survey product claim.">
         <OriginalVisualFrame title="Attention surface" caption="Use drilldown county pages for real local truth; this is a visual metaphor.">

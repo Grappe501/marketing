@@ -5,7 +5,7 @@ import { StatusPill } from "@/components/StatusPill";
 
 export function FeatureCard({ feature }: { feature: Feature }) {
   return (
-    <Link href={routes.feature(feature.slug)} className="rd-panel" style={{ padding: "1rem", display: "block" }}>
+    <Link href={routes.feature(feature.slug)} className="rd-panel rd-panel-glow rd-visual-surface" style={{ padding: "1rem", display: "block" }}>
       <div style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", alignItems: "flex-start" }}>
         <div>
           <p className="rd-eyebrow" style={{ letterSpacing: "0.14em", fontSize: "0.68rem" }}>

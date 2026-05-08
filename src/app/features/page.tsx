@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FeatureCard } from "@/components/FeatureCard";
+import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { FeatureConstellation } from "@/components/visuals/FeatureConstellation";
 import { getFeatures, getLanes } from "@/lib/marketingData";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
@@ -24,6 +26,11 @@ export default function Page() {
         title="Drill from category to exact capability"
         subtitle="Eighty-two capabilities, each written like a serious staffer is asking: what breaks, what RedDirt is designed to do, how operators run it, what leadership gains, and what risk drops—without claiming every module is live in production unless your deployment says so."
       />
+      <Section title="Taxonomy as a mesh" intro="The list below is grouped by lane. This illustration is an abstract reminder that capabilities hand off across lanes—not isolated SKUs.">
+        <OriginalVisualFrame title="Capability constellation (abstract)" caption="Not a dependency graph — a visual metaphor for cross-lane connections.">
+          <FeatureConstellation />
+        </OriginalVisualFrame>
+      </Section>
       {lanes.map((lane) => {
         const laneFeatures = features.filter((f) => f.laneSlug === lane.slug);
         return (

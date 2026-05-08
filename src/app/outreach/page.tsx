@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { OriginalVisualFrame } from "@/components/OriginalVisualFrame";
 import { EmailLaunchMock } from "@/components/visuals/EmailLaunchMock";
+import { RankedActionsMock } from "@/components/visuals/RankedActionsMock";
 import { pageMeta } from "@/lib/seo";
 import { routes } from "@/lib/routes";
 
@@ -26,6 +27,9 @@ export default function Page() {
         <NarrativeBlock kicker="Execution" title="Preflight is a campaign habit">
           Provider sync readiness can be integration-ready where configured—but the moral requirement is operator-guided validation: mapping, permissions, suppression deltas, and proof that the launch object matches reality.
         </NarrativeBlock>
+        <OriginalVisualFrame title="What still has to surface before send (queue mock)" caption="Ranked work across lanes — outreach is not an island." style={{ marginTop: "1.25rem" }}>
+          <RankedActionsMock />
+        </OriginalVisualFrame>
       </Section>
       <Section title="Launch rail (illustrative)" intro="Original CSS/SVG-style rail—not a screenshot.">
         <OriginalVisualFrame title="Email launch mock" caption="Audience → message → preflight → test → final approval → send.">
