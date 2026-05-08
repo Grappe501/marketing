@@ -2,7 +2,7 @@
 
 Standalone marketing website for **RedDirt Operating Systems** (RedDirt OS): a governed campaign operating system narrative—lanes, features, drilldowns, original CSS/SVG-style visuals (no stock photos), no paid APIs, no analytics in-site.
 
-This folder is **its own product lane**: own `package.json`, App Router app, styles, and content data. It does not modify `RedDirt/`, `countyWorkbench/`, or other lanes.
+This repository is a **standalone** Next.js marketing site (static export). It is **not** deployed as a `Marketing/` subfolder inside another repo: clone this repo, build from the **repository root**, and publish `out/`. Product code for other lanes lives in separate repositories (e.g. RedDirt OS campaign app), not here.
 
 ## Purpose
 
@@ -13,8 +13,9 @@ This folder is **its own product lane**: own `package.json`, App Router app, sty
 
 ## Commands
 
+From the **repository root** (after `git clone`):
+
 ```bash
-cd Marketing
 npm install
 npm run dev
 npm run build
@@ -31,31 +32,26 @@ npm run qa      # after build: verify out/ + scan src for obvious issues
 
 **Preview / noindex:** set `NEXT_PUBLIC_NO_INDEX=true` on preview deploys to emit `noindex` robots and disallow crawlers (see `.env.example`).
 
-## GitHub branch + Netlify (own site)
+## GitHub + Netlify (standalone repository)
 
-**Pass 2 git expectation:** from the monorepo root that contains `.git`, create branch `marketing/pass-2-copy-visuals`, commit `Marketing/` only, push to `origin`.
+Canonical remote: **`https://github.com/Grappe501/marketing.git`**. Default branch for deploys: **`main`**.
 
 ```bash
-git status --short
-git checkout -b marketing/pass-2-copy-visuals   # or: git checkout marketing/pass-2-copy-visuals
-git add Marketing
-git commit -m "Build RedDirt OS marketing site pass 2 copy and visuals"
-git push -u origin marketing/pass-2-copy-visuals
+git clone https://github.com/Grappe501/marketing.git
+cd marketing
+npm install
+npm run build
 ```
 
-If `H:\SOSWebsite` has **no** `.git` in your environment, run the same commands from whichever directory is the real Git root that contains `Marketing/` as a subfolder.
+**Netlify** (this repo is the site root — do **not** set a “Base directory” to `Marketing`):
 
-When git is available and you want **this site on its own Netlify deploy**, a common pattern is:
+1. New site → connect **`Grappe501/marketing`**.
+2. **Base directory:** leave **empty** (repository root).
+3. **Build command:** `npm run build` (already in `netlify.toml`).
+4. **Publish directory:** `out` (already in `netlify.toml`).
+5. Environment: **`NEXT_PUBLIC_SITE_URL`** = your production URL; optional **`NEXT_PUBLIC_NO_INDEX=true`** on previews.
 
-1. **Branch from `main`** (or your default branch), e.g. `marketing/reddirt-os-site` or `marketing/pass-2-copy-visuals`.
-2. **Commit only `Marketing/`** (or the whole monorepo if that is how you deploy—either way, Netlify can scope to this folder).
-3. **New Netlify site** → connect the repo → set:
-   - **Base directory:** `Marketing`
-   - **Build command:** `npm run build`
-   - **Publish directory:** `out`
-4. Add **environment variable** `NEXT_PUBLIC_SITE_URL` = your Netlify URL (or custom domain).
-
-`netlify.toml` in this folder encodes build/publish defaults for Netlify when the site root is `Marketing/`.
+`netlify.toml` at repo root defines build, publish, Node 20, and security headers — no monorepo `base` path.
 
 ## Route map
 
