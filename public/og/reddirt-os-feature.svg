@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t3 d3">
+  <title id="t3">RedDirt OS  Capability</title>
+  <desc id="d3">Feature depth preview</desc>
+  <rect width="1200" height="630" fill="#06070a"/>
+  <circle cx="900" cy="200" r="140" fill="rgba(196,92,42,0.08)" stroke="rgba(196,92,42,0.35)" stroke-width="2"/>
+  <circle cx="820" cy="320" r="90" fill="rgba(122,162,247,0.06)" stroke="rgba(122,162,247,0.25)" stroke-width="1"/>
+  <text x="80" y="180" fill="#d3a756" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" letter-spacing="0.2em">CAPABILITY</text>
+  <text x="80" y="260" fill="#f4f1ea" font-family="ui-sans-serif,system-ui,sans-serif" font-size="48" font-weight="650">Mapped to real operator work</text>
+  <text x="80" y="330" fill="#9aa3b2" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26">Designed for review gates, handoff, and governed execution  not accidental send.</text>
+  <rect x="80" y="400" width="640" height="8" rx="4" fill="#c45c2a" opacity="0.75"/>
+</svg>

@@ -1,0 +1,15 @@
+export function OriginalVisualFrame({ title, caption, children }: { title: string; caption?: string; children: React.ReactNode }) {
+  return (
+    <figure className="rd-panel rd-panel-glow" style={{ margin: 0, padding: "1rem" }}>
+      <figcaption style={{ marginBottom: "0.75rem" }}>
+        <p style={{ margin: 0, fontWeight: 650 }}>{title}</p>
+        {caption ? (
+          <p className="rd-muted" style={{ margin: "0.35rem 0 0", fontSize: "0.88rem" }}>
+            {caption}
+          </p>
+        ) : null}
+      </figcaption>
+      <div>{children}</div>
+    </figure>
+  );
+}
