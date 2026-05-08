@@ -8,6 +8,7 @@ import { DemoWalkthrough } from "@/components/DemoWalkthrough";
 import { FeatureSpotlight } from "@/components/FeatureSpotlight";
 import { GoldenCircle } from "@/components/GoldenCircle";
 import { HomeHero } from "@/components/HomeHero";
+import { InteractiveFeatureGrid } from "@/components/InteractiveFeatureGrid";
 import { LaneCard } from "@/components/LaneCard";
 import { MotionReveal } from "@/components/MotionReveal";
 import { NarrativeBlock } from "@/components/NarrativeBlock";
@@ -209,6 +210,17 @@ export default function HomePage() {
             <FeatureConstellation />
           </OriginalVisualFrame>
         </div>
+        <div style={{ marginTop: "1.25rem" }}>
+          <p className="rd-muted" style={{ margin: "0 0 0.5rem", fontSize: "0.88rem" }}>
+            Quick links into spotlight capabilities (same pages as the cards above):
+          </p>
+          <InteractiveFeatureGrid
+            cells={spotlights.slice(0, 8).map((f) => ({
+              label: f!.shortTitle,
+              href: routes.feature(f!.slug),
+            }))}
+          />
+        </div>
       </Section>
       </MotionReveal>
 
@@ -216,7 +228,7 @@ export default function HomePage() {
       <Section
         eyebrow="Walkthrough"
         title="Walk the race from the Cockpit"
-        intro="This is a narrative demo—Pass 2 stays static (no backend). It is written so a serious campaign staffer recognizes their week."
+        intro="This is a narrative demo—static marketing build (no backend). It is written so a serious campaign staffer recognizes their week."
       >
         <DemoWalkthrough />
         <p style={{ marginTop: "1rem" }}>
